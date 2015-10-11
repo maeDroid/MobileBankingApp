@@ -1,9 +1,10 @@
 package mae.comp3717.bcit.ca.bankingapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +34,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void login(final View view) {
+        //Intent intent = new Intent(this, LoginActivity.class);
+        //startActivity(intent);
+    }
+
+    public void launchNews(final View view) {
+        //Intent intent = new Intent(this, NewsActivity.class);
+        //startActivity(intent);
+    }
+
+    public void launchRates(final View view) {
+        //Intent intent = new Intent(this, RatesActivity.class);
+        //startActivity(intent);
+    }
+
+    public void launchAbout(final View view) {
+        //Intent intent = new Intent(this, AboutActivity.class);
+        //startActivity(intent);
+    }
+
+    public void locateBranch(final View view) {
+        //Intent intent = new Intent(this, LocatorActivity.class);
+        //startActivity(intent);
     }
 }
