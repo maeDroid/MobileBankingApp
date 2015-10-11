@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void locateBranch(final View view) {
-        //Intent intent = new Intent(this, LocatorActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, LocatorActivity.class);
+        startActivity(intent);
     }
 }

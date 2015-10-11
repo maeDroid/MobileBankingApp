@@ -3,25 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <!-- Search / will display always -->
+    <!-- Branch locator will display always -->
     <item android:id="@+id/action_locate_branch"
         android:icon="@drawable/ic_location_searching_white_48dp"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         />
 
-    <!-- Search / will display always -->
+
+
+    <!-- About Us -->
+    <item android:id="@+id/action_about"
+        android:title="@string/title_activity_about"
+        app:showAsAction="never"
+        />
+
+    <!-- News -->
+    <item android:id="@+id/action_news"
+        android:title="@string/title_activity_news"
+        app:showAsAction="never"
+        />
+
+    <!-- Rates -->
+    <item android:id="@+id/action_rates"
+        android:title="@string/title_activity_rates"
+        app:showAsAction="never"
+        />
+
+    <!-- Search -->
     <item android:id="@+id/action_search"
         android:icon="@drawable/ic_search_white_48dp"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         />
 
+    <!-- Settings -->
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        />
+
+    <!-- Signout -->
+    <item android:id="@+id/action_signout"
+        android:title="@string/action_sign_out"
+        app:showAsAction="never"
+        />
+
+
 
 
 </menu>

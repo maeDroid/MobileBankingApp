@@ -8,7 +8,8 @@
     <string name="action_location_found">Location</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_help">Help</string>
-    <string name="action_example">Example action</string>
+    <string name="action_messages">My Messages</string>
+    <string name="action_sign_out">Sign Out</string>
 
     <string name="title_activity_rates">Current Rates</string>
     <string name="title_activity_news">News</string>
@@ -53,5 +54,10 @@
     </string-array>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_locator">Branch Locator</string>
+
+    <!-- Strings related to branch locator -->
+    <string name="find">Find</string>
+    <string name="location">Enter Location</string>
 
 </resources>
