@@ -43,18 +43,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchNews(final View view) {
-        //Intent intent = new Intent(this, NewsActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, NewsActivity.class);
+        startActivity(intent);
     }
 
     public void launchRates(final View view) {
-        //Intent intent = new Intent(this, RatesActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, RatesActivity.class);
+        startActivity(intent);
     }
 
     public void launchAbout(final View view) {
-        //Intent intent = new Intent(this, AboutActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
     }
 
     public void locateBranch(final View view) {

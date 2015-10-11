@@ -21,6 +21,26 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name=".AcctSummaryActivity"
+            android:label="@string/title_activity_acct_summary" >
+        </activity>
+        <activity
+            android:name=".AcctDetailActivity"
+            android:label="@string/title_activity_acct_detail" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news" >
+        </activity>
+        <activity
+            android:name=".RatesActivity"
+            android:label="@string/title_activity_rates" >
+        </activity>
     </application>
 
 </manifest>

@@ -52,4 +52,6 @@
         <item>First pet\'s name</item>
     </string-array>
 
+    <string name="hello_world">Hello world!</string>
+
 </resources>

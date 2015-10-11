@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TableLayout;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,7 +31,6 @@ public class LoginActivity extends AppCompatActivity {
         register.setVisibility(View.GONE);
         table.setVisibility(View.GONE);
         cancel.setVisibility(View.GONE);
-
 
     }
 
@@ -88,18 +88,18 @@ public class LoginActivity extends AppCompatActivity {
 
     public void register(final View view) {
 
-        Intent intent;
+        hideRegistration(view);
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Thank you for registering.  Please login.",
+                Toast.LENGTH_LONG);
 
-        //intent      = new Intent(this, AcctSummaryActivity.class);
-        //startActivity(intent);
+        toast.show();
     }
 
     public void signin(final View view) {
 
-        Intent intent;
-
-        //intent      = new Intent(this, AcctSummaryActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, AcctSummaryActivity.class);
+        startActivity(intent);
     }
 
 }
