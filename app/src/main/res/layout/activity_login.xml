@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/header"
-        android:text="@string/bankname"
+        android:text="@string/header"
         android:textSize="32sp"
         android:textColor="#990000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="40dp"
+        android:layout_margin="10dp"
         />
 
     <ScrollView
@@ -38,13 +38,16 @@
 
                 <TableRow
                     android:id="@+id/login_row1"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    >
 
                     <TextView
-                        android:id="@+id/tv_id"
-                        android:text="@string/prompt_id"
+                        android:id="@+id/tv_card_number"
+                        android:text="@string/card_number"
                         android:textSize="16sp"
                         android:gravity="right"
                         android:paddingRight="10dp"
@@ -54,25 +57,27 @@
                         />
 
                     <AutoCompleteTextView
-                        android:id="@+id/id"
+                        android:id="@+id/card_number"
                         android:textSize="16sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
-                        android:hint="@string/hint_id"
+                        android:hint="@string/hint_card_number"
                         android:maxLines="1"
                         android:singleLine="true" />
                 </TableRow>
+
 
                 <TableRow
                     android:id="@+id/login_row2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:id="@+id/tv_pwd"
-                        android:text="@string/prompt_password"
+                        android:text="@string/password"
                         android:textSize="16sp"
                         android:gravity="right"
                         android:paddingRight="10dp"
@@ -86,9 +91,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
                         android:hint="@string/hint_password"
-                        android:imeActionId="@+id/login"
-                        android:imeActionLabel="@string/action_register"
-                        android:imeOptions="actionUnspecified"
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true" />
@@ -96,6 +98,17 @@
 
                 </TableRow>
             </TableLayout>
+
+            <Switch
+                android:id="@+id/remember_me"
+                android:text="@string/remember_card"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
 
             <Button
                 android:id="@+id/sign_in_button"
@@ -129,7 +142,8 @@
                     android:id="@+id/reg_row1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:id="@+id/tv_firstname"
@@ -157,7 +171,8 @@
                     android:id="@+id/reg_row2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:id="@+id/tv_lastname"
@@ -183,7 +198,8 @@
                     android:id="@+id/reg_row3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:id="@+id/tv_email"
@@ -204,13 +220,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
                         />
+
                 </TableRow>
 
                 <TableRow
                     android:id="@+id/reg_row4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:id="@+id/tv_phone"
@@ -237,6 +255,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
                     >
 
                     <TextView
@@ -250,20 +269,30 @@
                         android:layout_weight="0.25"
                         />
 
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner"
+                        android:entries="@array/questions"
+                        android:layout_weight="0.75"/>
+                    <!--
                     <EditText
                         android:id="@+id/et_securityQ"
                         android:textSize="16sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
-                        />
+                        />-->
                 </TableRow>
 
                 <TableRow
                     android:id="@+id/reg_row6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
+
+
 
                     <TextView
                         android:id="@+id/tv_securityA"

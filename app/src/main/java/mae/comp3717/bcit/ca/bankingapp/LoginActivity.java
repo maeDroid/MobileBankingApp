@@ -7,9 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TableLayout;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         register.setVisibility(View.GONE);
         table.setVisibility(View.GONE);
         cancel.setVisibility(View.GONE);
+
 
     }
 
@@ -97,4 +101,5 @@ public class LoginActivity extends AppCompatActivity {
         //intent      = new Intent(this, AcctSummaryActivity.class);
         //startActivity(intent);
     }
+
 }

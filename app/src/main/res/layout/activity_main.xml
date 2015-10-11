@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/header"
-        android:text="@string/bankname"
+        android:text="@string/header"
         android:textSize="32sp"
         android:textColor="#990000"
         android:layout_width="wrap_content"

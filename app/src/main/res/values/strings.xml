@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Sea To Sky Mobile Banking App</string>
     <string name="footer">Sea to Sky Bank \nSquamish, B.C.</string>
-    <string name="bankname">Sea to Sky Bank</string>
+    <string name="header">Sea to Sky Bank</string>
 
     <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
@@ -20,18 +20,19 @@
 
 
     <!-- Strings related to login -->
-    <string name="prompt_id">ID</string>
-    <string name="prompt_password">Password</string>
+    <string name="card_number">Card Number</string>
+    <string name="password">Password</string>
+    <string name="remember_card">Remember my card</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_register">Register</string>
 
-    <string name="error_invalid_email">Invalid ID</string>
+    <string name="error_invalid_email">Invalid Card Number</string>
     <string name="error_invalid_password">Invalid length</string>
     <string name="error_incorrect_password">Incorrect password</string>
     <string name="error_field_required">Required Field</string>
 
-    <string name="hint_id">hint: id</string>
-    <string name="hint_password">hint: pwd</string>
+    <string name="hint_card_number">1234 5678 9000 0000</string>
+    <string name="hint_password"></string>
 
     <string name="new_reg">Click here to Register a New Account</string>
     <string name="cancel_reg">Cancel</string>
@@ -42,5 +43,13 @@
     <string name="security_answer">Answer</string>
     <string name="email">E-Mail</string>
     <string name="phone">Phone Number</string>
+
+    <string-array name="questions">
+        <item>Favorite CST course?</item>
+        <item>Favorite CST instructor?</item>
+        <item>First street you lived on?</item>
+        <item>Mother\'s maiden name</item>
+        <item>First pet\'s name</item>
+    </string-array>
 
 </resources>
