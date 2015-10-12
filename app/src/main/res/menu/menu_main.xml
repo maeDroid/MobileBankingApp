@@ -4,30 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <!-- Branch locator will display always -->
-    <item android:id="@+id/action_locate_branch"
-        android:icon="@drawable/ic_location_searching_white_48dp"
-        android:title="@string/search"
+    <!-- Accounts Summary will display - if logged in -->
+    <item android:id="@+id/action_acct_summary"
+        android:icon="@drawable/ic_home_white_48dp"
+        android:title="@string/acct_summary"
         app:showAsAction="always"
         />
 
-    <!-- About Us -->
-    <item android:id="@+id/action_about"
-        android:title="@string/about"
-        app:showAsAction="never"
+    <!-- Messages will display - if logged in -->
+    <item android:id="@+id/action_messages"
+        android:icon="@drawable/ic_mail_white_48dp"
+        android:title="@string/messages"
+        app:showAsAction="always"
         />
 
-    <!-- News -->
-    <item android:id="@+id/action_news"
-        android:title="@string/news"
-        app:showAsAction="never"
+    <!-- Branch locator will display if there's room -->
+    <item android:id="@+id/action_locate_branch"
+        android:icon="@drawable/ic_location_searching_white_48dp"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"
         />
 
-    <!-- Rates -->
-    <item android:id="@+id/action_rates"
-        android:title="@string/rates"
-        app:showAsAction="never"
-        />
+
+    <!-- SAVE FOR FUTURE IMPLEMENTATION
+
+        <item android:id="@+id/action_about"
+            android:title="@string/about"
+            app:showAsAction="never"
+            />
+
+        <item android:id="@+id/action_news"
+            android:title="@string/news"
+            app:showAsAction="never"
+            />
+
+        <item android:id="@+id/action_rates"
+            android:title="@string/rates"
+            app:showAsAction="never"
+            />
+    -->
 
     <!-- Search
     <item android:id="@+id/action_search"
@@ -36,14 +51,6 @@
         app:showAsAction="never"
         />
     -->
-
-    <!-- Settings -->
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/settings"
-        android:orderInCategory="100"
-        app:showAsAction="never"
-        />
 
     <!-- Sign in -->
     <item android:id="@+id/action_sign_in"
@@ -56,5 +63,15 @@
         android:title="@string/sign_out"
         app:showAsAction="never"
         />
+
+    <!-- Settings will display always -->
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+
 
 </menu>

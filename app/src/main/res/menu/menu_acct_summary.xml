@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="mae.comp3717.bcit.ca.bankingapp.AcctSummaryActivity">
 
-    <!-- Messages will always display - if logged in -->
+    <!-- Messages will display - if logged in -->
     <item android:id="@+id/action_messages"
         android:icon="@drawable/ic_mail_white_48dp"
         android:title="@string/messages"
@@ -48,6 +48,12 @@
         android:id="@+id/action_settings"
         android:title="@string/settings"
         android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+    <!-- Sign in -->
+    <item android:id="@+id/action_sign_in"
+        android:title="@string/sign_in"
         app:showAsAction="never"
         />
 

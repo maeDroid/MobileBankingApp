@@ -52,6 +52,7 @@
                         android:textSize="16sp"
                         android:gravity="right"
                         android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
@@ -80,8 +81,9 @@
                         android:id="@+id/tv_pwd"
                         android:text="@string/password"
                         android:textSize="16sp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
@@ -100,15 +102,18 @@
                 </TableRow>
             </TableLayout>
 
+
             <Switch
                 android:id="@+id/remember_me"
                 android:text="@string/remember_card"
                 android:textSize="16sp"
+                android:textColor="#777777"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:padding="10dp"
                 />
 
             <Button
@@ -116,9 +121,12 @@
                 android:text="@string/sign_in"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#990000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:padding="5dp"
                 android:onClick="signin" />
 
             <Button
@@ -217,6 +225,7 @@
                     <EditText
                         android:id="@+id/et_email"
                         android:textSize="16sp"
+                        android:inputType="textEmailAddress"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
@@ -245,6 +254,7 @@
                     <EditText
                         android:id="@+id/et_phone"
                         android:textSize="16sp"
+                        android:inputType="phone"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.75"
@@ -271,7 +281,7 @@
                         />
 
                     <Spinner
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/spinner"
                         android:entries="@array/questions"
@@ -322,9 +332,12 @@
                 android:text="@string/register"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#990000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:padding="5dp"
                 android:onClick="register"
                 />
 

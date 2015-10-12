@@ -25,14 +25,18 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        MenuItem sign_in = menu.findItem(R.id.action_sign_in);
-        MenuItem sign_out = menu.findItem(R.id.action_sign_out);
-        if (!loggedIn) {
+        MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
+        MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
+        MenuItem messages   = menu.findItem(R.id.action_messages);
+
+        if (!MainActivity.loggedIn) {
             sign_out.setVisible(false);
             sign_in.setVisible(true);
+            messages.setVisible(false);
         } else {
-            sign_out.setVisible(false);
-            sign_in.setVisible(true);
+            sign_out.setVisible(true);
+            sign_in.setVisible(false);
+            messages.setVisible(true);
         }
 
         return true;
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
+        Toast.makeText(this, "Main Activity logged in: " + MainActivity.loggedIn, Toast.LENGTH_LONG).show();
         //noinspection SimplifiableIfStatement
 
         if (id == R.id.action_locate_branch) {
@@ -56,8 +61,17 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_sign_in) {
+        if (id == R.id.action_sign_in && !MainActivity.loggedIn) {
             Toast.makeText(this, "Sign in", Toast.LENGTH_LONG).show();
+            intent = new Intent(this, LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_sign_out && MainActivity.loggedIn) {
+            Toast.makeText(this, "Signing out", Toast.LENGTH_LONG).show();
+            MainActivity.loggedIn = false;
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -95,8 +109,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
-
-
 
         return super.onOptionsItemSelected(item);
     }
