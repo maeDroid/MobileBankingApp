@@ -6,71 +6,102 @@
     >
 
     <LinearLayout
-        android:id="@+id/banking_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_banking"
-            android:text="@string/banking"
-            android:textSize="20sp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:gravity="left"
-            android:background="#990000"
+        <LinearLayout
+            android:id="@+id/banking_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:padding="10dp"
-            android:onClick="toggleBankingListview" />
+            android:orientation="horizontal"
+            android:background="#990000">
+
+            <Button
+                android:id="@+id/btn_banking"
+                android:text="@string/banking"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="#990000"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:padding="10dp"
+                android:onClick="toggleBankingListview" />
+
+
+            <ImageButton
+                android:id="@+id/ib_banking"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="#990000"
+                android:src="@drawable/ic_keyboard_arrow_up_white_36dp"
+                android:onClick="toggleBankingListview"/>
+
+        </LinearLayout>
+
 
         <ListView
             android:id="@+id/banking_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
-<!--
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/borrowing_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/banking_layout"
-        android:orientation="vertical">
-        -->
-
-        <Button
-            android:id="@+id/btn_borrowing"
-            android:text="@string/borrowing"
-            android:textSize="20sp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:background="#990000"
-            android:gravity="left"
+        <LinearLayout
+            android:id="@+id/borrowing_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:padding="10dp"
-            android:onClick="toggleBorrowingListview" />
+            android:orientation="horizontal"
+            android:background="#990000">
+
+            <Button
+                android:id="@+id/btn_borrowing"
+                android:text="@string/borrowing"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="#990000"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                android:onClick="toggleBorrowingListview" />
+
+            <ImageButton
+                android:id="@+id/ib_borrowing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="#990000"
+                android:src="@drawable/ic_keyboard_arrow_down_white_36dp"
+                android:onClick="toggleBorrowingListview"/>
+
+        </LinearLayout>
 
         <ListView
             android:id="@+id/borrowing_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
-<!--
-    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/investing_layout"
+        android:id="@+id/investing_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/borrowing_layout"
-        android:orientation="vertical">
--->
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="#990000">
+
         <Button
             android:id="@+id/btn_investing"
             android:text="@string/investing"
@@ -79,19 +110,32 @@
             android:textStyle="bold"
             android:background="#990000"
             android:gravity="left"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="6"
             android:layout_marginBottom="5dp"
             android:padding="10dp"
             android:onClick="toggleInvestingListview"
             />
+
+        <ImageButton
+            android:id="@+id/ib_investing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="#990000"
+            android:src="@drawable/ic_keyboard_arrow_down_white_36dp"
+            android:onClick="toggleInvestingListview"/>
+
+        </LinearLayout>
 
         <ListView
             android:id="@+id/investing_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
-    </LinearLayout>
 
+    </LinearLayout>
 
 </RelativeLayout>

@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -80,39 +81,48 @@ public class AcctSummaryActivity extends AppCompatActivity {
     public void toggleBankingListview(final View view) {
 
         //Toast.makeText(AcctSummaryActivity.this, "toggle banking " + expandBanking , Toast.LENGTH_LONG).show();
+        ImageButton arrow = (ImageButton) findViewById(R.id.ib_banking);
 
         if (expandBanking) {
             banking_listview.setVisibility(View.GONE);
             expandBanking = false;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_down_white_36dp);
         } else {
             banking_listview.setVisibility(View.VISIBLE);
             expandBanking = true;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_white_36dp);
         }
     }
 
     public void toggleBorrowingListview(final View view) {
 
+        ImageButton arrow = (ImageButton) findViewById(R.id.ib_borrowing);
         //Toast.makeText(AcctSummaryActivity.this, "toggle borrowing " + expandBorrowing , Toast.LENGTH_LONG).show();
 
         if (expandBorrowing) {
             borrowing_listview.setVisibility(View.GONE);
             expandBorrowing = false;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_down_white_36dp);
         } else {
             borrowing_listview.setVisibility(View.VISIBLE);
             expandBorrowing = true;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_white_36dp);
         }
     }
 
     public void toggleInvestingListview(final View view) {
 
         //Toast.makeText(AcctSummaryActivity.this, "toggle investing " + expandInvesting , Toast.LENGTH_LONG).show();
+        ImageButton arrow = (ImageButton) findViewById(R.id.ib_investing);
 
         if (expandInvesting) {
             investing_listview.setVisibility(View.GONE);
             expandInvesting = false;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_down_white_36dp);
         } else {
             investing_listview.setVisibility(View.VISIBLE);
             expandInvesting = true;
+            arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_white_36dp);
         }
     }
 
