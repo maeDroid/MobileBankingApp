@@ -34,27 +34,27 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
+            android:label="@string/sign_in" >
         </activity>
         <activity
             android:name=".AcctSummaryActivity"
-            android:label="@string/title_activity_acct_summary" >
+            android:label="@string/acct_summary" >
         </activity>
         <activity
             android:name=".AcctDetailActivity"
-            android:label="@string/title_activity_acct_detail" >
+            android:label="@string/acct_detail" >
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about" >
+            android:label="@string/about" >
         </activity>
         <activity
             android:name=".NewsActivity"
-            android:label="@string/title_activity_news" >
+            android:label="@string/news" >
         </activity>
         <activity
             android:name=".RatesActivity"
-            android:label="@string/title_activity_rates" >
+            android:label="@string/rates" >
         </activity>
         <activity
             android:name=".SettingsActivity"
@@ -67,7 +67,7 @@
 
         <activity
             android:name=".LocatorActivity"
-            android:label="@string/title_activity_locator" >
+            android:label="@string/branch_locator" >
         </activity>
     </application>
 

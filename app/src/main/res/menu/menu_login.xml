@@ -8,46 +8,46 @@
     <!-- Branch locator will display always -->
     <item android:id="@+id/action_locate_branch"
         android:icon="@drawable/ic_location_searching_white_48dp"
-        android:title="@string/action_search"
+        android:title="@string/search"
         app:showAsAction="always"
         />
 
     <!-- About Us -->
     <item android:id="@+id/action_about"
-        android:title="@string/title_activity_about"
+        android:title="@string/about"
         app:showAsAction="never"
         />
 
     <!-- News -->
     <item android:id="@+id/action_news"
-        android:title="@string/title_activity_news"
+        android:title="@string/news"
         app:showAsAction="never"
         />
 
     <!-- Rates -->
     <item android:id="@+id/action_rates"
-        android:title="@string/title_activity_rates"
+        android:title="@string/rates"
         app:showAsAction="never"
         />
 
     <!-- Search -->
     <item android:id="@+id/action_search"
         android:icon="@drawable/ic_search_white_48dp"
-        android:title="@string/action_search"
+        android:title="@string/search"
         app:showAsAction="never"
         />
 
     <!-- Settings -->
     <item
         android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+        android:title="@string/settings"
         android:orderInCategory="100"
         app:showAsAction="never"
         />
 
     <!-- Signout -->
-    <item android:id="@+id/action_signout"
-        android:title="@string/action_sign_out"
+    <item android:id="@+id/action_sign_out"
+        android:title="@string/sign_out"
         app:showAsAction="never"
         />
 

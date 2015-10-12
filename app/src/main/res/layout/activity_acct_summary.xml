@@ -1,12 +1,97 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mae.comp3717.bcit.ca.bankingapp.AcctSummaryActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mae.comp3717.bcit.ca.bankingapp.AcctSummaryActivity"
+    >
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/banking_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_banking"
+            android:text="@string/banking"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:background="#990000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:onClick="toggleBankingListview" />
+
+        <ListView
+            android:id="@+id/banking_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+<!--
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/borrowing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banking_layout"
+        android:orientation="vertical">
+        -->
+
+        <Button
+            android:id="@+id/btn_borrowing"
+            android:text="@string/borrowing"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="#990000"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:onClick="toggleBorrowingListview" />
+
+        <ListView
+            android:id="@+id/borrowing_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+<!--
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/investing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/borrowing_layout"
+        android:orientation="vertical">
+-->
+        <Button
+            android:id="@+id/btn_investing"
+            android:text="@string/investing"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="#990000"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:onClick="toggleInvestingListview"
+            />
+
+        <ListView
+            android:id="@+id/investing_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
 
 </RelativeLayout>

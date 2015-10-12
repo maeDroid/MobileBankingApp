@@ -37,7 +37,18 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
+        MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
+
+        if (!MainActivity.loggedIn) {
+            sign_out.setVisible(false);
+            sign_in.setVisible(true);
+        } else {
+            sign_out.setVisible(false);
+            sign_in.setVisible(true);
+        }
         return true;
     }
 
@@ -90,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
 
         hideRegistration(view);
         Toast toast = Toast.makeText(getApplicationContext(),
-                "Thank you for registering.  Please login.",
+                "Thank you for registering.  Please sign_in.",
                 Toast.LENGTH_LONG);
 
         toast.show();
@@ -100,6 +111,8 @@ public class LoginActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, AcctSummaryActivity.class);
         startActivity(intent);
+        MainActivity.loggedIn = true;
     }
+
 
 }

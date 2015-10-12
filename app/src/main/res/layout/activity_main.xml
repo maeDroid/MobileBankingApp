@@ -41,7 +41,7 @@
 
         <Button
             android:id="@+id/btnRates"
-            android:text="@string/title_activity_rates"
+            android:text="@string/rates"
             android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="#990000"
@@ -57,8 +57,8 @@
             />
 
         <Button
-            android:id="@+id/btnLogin"
-            android:text="@string/title_activity_login"
+            android:id="@+id/btnSignIn"
+            android:text="@string/sign_in"
             android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="#990000"
@@ -69,12 +69,12 @@
             android:paddingBottom="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:onClick="login"
+            android:onClick="sign_in"
             />
 
         <Button
             android:id="@+id/btnBranchLocator"
-            android:text="@string/title_activity_branch_locator"
+            android:text="@string/branch_locator"
             android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="#990000"
@@ -101,7 +101,7 @@
 
         <Button
             android:id="@+id/btnNews"
-            android:text="@string/title_activity_news"
+            android:text="@string/news"
             android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="#990000"
@@ -133,7 +133,7 @@
 
         <Button
             android:id="@+id/btnAbout"
-            android:text="@string/title_activity_about"
+            android:text="@string/about"
             android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="#990000"

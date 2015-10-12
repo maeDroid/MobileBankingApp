@@ -5,7 +5,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="mae.comp3717.bcit.ca.seatoskybank.LoginActivity">
+    tools:context="mae.comp3717.bcit.ca.seatoskybank.LoginActivity"
+    >
 
     <TextView
         android:id="@+id/header"
@@ -112,7 +113,7 @@
 
             <Button
                 android:id="@+id/sign_in_button"
-                android:text="@string/action_sign_in"
+                android:text="@string/sign_in"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
@@ -318,7 +319,7 @@
 
             <Button
                 android:id="@+id/registration_button"
-                android:text="@string/action_register"
+                android:text="@string/register"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"

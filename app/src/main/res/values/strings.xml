@@ -1,31 +1,27 @@
 <resources>
+    <string name="hello_world">Hello World!</string>
     <string name="app_name">Sea To Sky Mobile Banking App</string>
     <string name="footer">Sea to Sky Bank \nSquamish, B.C.</string>
     <string name="header">Sea to Sky Bank</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="action_search">Search</string>
-    <string name="action_location_found">Location</string>
-    <string name="action_refresh">Refresh</string>
-    <string name="action_help">Help</string>
-    <string name="action_messages">My Messages</string>
-    <string name="action_sign_out">Sign Out</string>
-
-    <string name="title_activity_rates">Current Rates</string>
-    <string name="title_activity_news">News</string>
-    <string name="title_activity_acct_summary">Account Summary</string>
-    <string name="title_activity_acct_detail">Account Details</string>
-    <string name="title_activity_branch_locator">Branch Locator</string>
-    <string name="title_activity_about">About Us</string>
-    <string name="title_activity_login">Login</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="rates">Current Rates</string>
+    <string name="news">News</string>
+    <string name="acct_summary">Account Summary</string>
+    <string name="acct_detail">Account Details</string>
+    <string name="branch_locator">Branch Locator</string>
+    <string name="about">About Us</string>
+    <string name="messages">Messages</string>
 
 
-    <!-- Strings related to login -->
+    <!-- Strings for LoginActivity -->
     <string name="card_number">Card Number</string>
     <string name="password">Password</string>
     <string name="remember_card">Remember my card</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_register">Register</string>
+    <string name="register">Register</string>
 
     <string name="error_invalid_email">Invalid Card Number</string>
     <string name="error_invalid_password">Invalid length</string>
@@ -53,11 +49,34 @@
         <item>First pet\'s name</item>
     </string-array>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_locator">Branch Locator</string>
 
-    <!-- Strings related to branch locator -->
+    <!-- Strings for LocatorActivity -->
     <string name="find">Find</string>
     <string name="location">Enter Location</string>
+
+    <!-- Strings for AcctSummaryActivity -->
+    <string name="banking">Banking</string>
+    <string name="borrowing">Borrowing</string>
+    <string name="investing">Investing</string>
+
+    <string-array name="banking_options">
+        <item>Chequing</item>
+        <item>Savings</item>
+        <item>USD Savings</item>
+    </string-array>
+
+    <string-array name="borrowing_options">
+        <item>VISA</item>
+        <item>Mortgage</item>
+    </string-array>
+
+    <string-array name="investing_options">
+        <item>CSB</item>
+        <item>GIC</item>
+        <item>TFSA</item>
+        <item>RRSP</item>
+        <item>Mutual Funds</item>
+        <item>Stocks</item>
+    </string-array>
 
 </resources>
