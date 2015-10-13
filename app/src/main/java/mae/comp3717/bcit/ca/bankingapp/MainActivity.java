@@ -28,15 +28,18 @@ public class MainActivity extends AppCompatActivity {
         MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
         MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
         MenuItem messages   = menu.findItem(R.id.action_messages);
+        MenuItem summary    = menu.findItem(R.id.action_acct_summary);
 
-        if (!MainActivity.loggedIn) {
+        if (!LoginActivity.loggedIn) {
             sign_out.setVisible(false);
             sign_in.setVisible(true);
             messages.setVisible(false);
+            summary.setVisible(false);
         } else {
             sign_out.setVisible(true);
             sign_in.setVisible(false);
             messages.setVisible(true);
+            summary.setVisible(true);
         }
 
         return true;
@@ -50,36 +53,40 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        Toast.makeText(this, "Main Activity logged in: " + MainActivity.loggedIn, Toast.LENGTH_LONG).show();
         //noinspection SimplifiableIfStatement
-
         if (id == R.id.action_locate_branch) {
-            Toast.makeText(this, "Locate Branch", Toast.LENGTH_LONG).show();
             intent = new Intent(this, LocatorActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
 
-        if (id == R.id.action_sign_in && !MainActivity.loggedIn) {
-            Toast.makeText(this, "Sign in", Toast.LENGTH_LONG).show();
+        if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
 
-        if (id == R.id.action_sign_out && MainActivity.loggedIn) {
-            Toast.makeText(this, "Signing out", Toast.LENGTH_LONG).show();
-            MainActivity.loggedIn = false;
+        if (id == R.id.action_sign_out && LoginActivity.loggedIn) {
+            LoginActivity.loggedIn = false;
+            Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
+
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
+
+        if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
+            intent = new Intent(this, AcctSummaryActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
 
         if (id == R.id.action_settings) {
-            Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
             intent = new Intent(this, SettingsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -87,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_about) {
-            Toast.makeText(this, "About", Toast.LENGTH_LONG).show();
             intent = new Intent(this, AboutActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -95,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_news) {
-            Toast.makeText(this, "News", Toast.LENGTH_LONG).show();
             intent = new Intent(this, NewsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -103,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_rates) {
-            Toast.makeText(this, "Rates", Toast.LENGTH_LONG).show();
             intent = new Intent(this, RatesActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

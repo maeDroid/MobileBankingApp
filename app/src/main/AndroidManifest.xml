@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <!--
- The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but are recommended.
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+                 Google Maps Android API v2, but are recommended.
     -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -26,11 +26,10 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/sign_in" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,6 +68,18 @@
         <activity
             android:name=".LocatorActivity"
             android:label="@string/branch_locator" >
+        </activity>
+        <activity
+            android:name=".MessageListActivity"
+            android:label="@string/title_message_list" >
+        </activity>
+        <activity
+            android:name=".MessageDetailActivity"
+            android:label="@string/title_message_detail"
+            android:parentActivityName=".MessageListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mae.comp3717.bcit.ca.bankingapp.MessageListActivity" />
         </activity>
     </application>
 

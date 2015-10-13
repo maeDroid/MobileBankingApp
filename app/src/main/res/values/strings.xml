@@ -79,5 +79,7 @@
         <item>Mutual Funds</item>
         <item>Stocks</item>
     </string-array>
+    <string name="title_message_list">Messages</string>
+    <string name="title_message_detail">Message Detail</string>
 
 </resources>

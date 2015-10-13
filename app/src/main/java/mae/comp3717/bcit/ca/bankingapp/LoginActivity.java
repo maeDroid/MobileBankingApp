@@ -48,8 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        Toast.makeText(this, "Login logged in: " + LoginActivity.loggedIn, Toast.LENGTH_LONG).show();
-
         MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
         MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
         MenuItem messages   = menu.findItem(R.id.action_messages);
@@ -78,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_locate_branch) {
-            Toast.makeText(this, "Locate Branch", Toast.LENGTH_LONG).show();
             intent = new Intent(this, LocatorActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -86,7 +83,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
-            Toast.makeText(this, "Sign in", Toast.LENGTH_LONG).show();
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -94,8 +90,9 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_sign_out && LoginActivity.loggedIn) {
-            Toast.makeText(this, "Signing out", Toast.LENGTH_LONG).show();
             LoginActivity.loggedIn = false;
+            Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
+
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -103,23 +100,54 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
-            Toast.makeText(this, "Redirecting to Acct Summary", Toast.LENGTH_SHORT).show();
             intent = new Intent(this, AcctSummaryActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
 
+        if (id == R.id.action_messages && LoginActivity.loggedIn) {
+            intent = new Intent(this, MessageListActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
 
         if (id == R.id.action_settings) {
-            Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
             intent = new Intent(this, SettingsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
 
+        if (id == R.id.action_about) {
+            intent = new Intent(this, AboutActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_news) {
+            intent = new Intent(this, NewsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_rates) {
+            intent = new Intent(this, RatesActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        invalidateOptionsMenu();
     }
 
     public void showRegistration(final View view) {

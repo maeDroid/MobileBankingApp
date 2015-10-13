@@ -20,13 +20,19 @@ public class NewsActivity extends AppCompatActivity {
 
         MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
         MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
+        MenuItem messages   = menu.findItem(R.id.action_messages);
+        MenuItem summary    = menu.findItem(R.id.action_acct_summary);
 
-        if (!MainActivity.loggedIn) {
+        if (!LoginActivity.loggedIn) {
             sign_out.setVisible(false);
             sign_in.setVisible(true);
+            messages.setVisible(false);
+            summary.setVisible(false);
         } else {
-            sign_out.setVisible(false);
-            sign_in.setVisible(true);
+            sign_out.setVisible(true);
+            sign_in.setVisible(false);
+            messages.setVisible(true);
+            summary.setVisible(true);
         }
         return true;
     }

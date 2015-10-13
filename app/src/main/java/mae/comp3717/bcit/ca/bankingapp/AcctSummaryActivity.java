@@ -20,16 +20,12 @@ public class AcctSummaryActivity extends AppCompatActivity {
     private ListView banking_listview;
     private ListView borrowing_listview;
     private ListView investing_listview;
-    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acct_summary);
 
-        Toast.makeText(this, "Acct Summary logged in: " + LoginActivity.loggedIn, Toast.LENGTH_LONG).show();
-
-        //String[] categories = {"Banking", "Borrowing", "Investing"};
         String[] bankingList = {"Savings", "Chequing", "USD Savings"};
         String[] borrowingList = {"VISA", "Mortgage"};
         String[] investingList = {"Bonds", "GIC", "TFSA", "RRSP", "Mutual Funds", "Stocks"};
@@ -54,7 +50,7 @@ public class AcctSummaryActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int index, long id) {
                         String cat_name = String.valueOf(parent.getItemAtPosition(index));
-                        Toast.makeText(AcctSummaryActivity.this, cat_name, Toast.LENGTH_LONG).show();
+                        Toast.makeText(AcctSummaryActivity.this, cat_name, Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -68,6 +64,9 @@ public class AcctSummaryActivity extends AppCompatActivity {
         MenuItem sign_in    = menu.findItem(R.id.action_sign_in);
         MenuItem sign_out   = menu.findItem(R.id.action_sign_out);
         MenuItem messages   = menu.findItem(R.id.action_messages);
+        MenuItem summary    = menu.findItem(R.id.action_acct_summary);
+
+        summary.setVisible(false);
 
         if (!LoginActivity.loggedIn) {
             sign_out.setVisible(false);
@@ -86,11 +85,11 @@ public class AcctSummaryActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        Intent intent;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_locate_branch) {
-            Toast.makeText(this, "Locate Branch", Toast.LENGTH_LONG).show();
             intent = new Intent(this, LocatorActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -98,7 +97,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
-            Toast.makeText(this, "Sign in", Toast.LENGTH_LONG).show();
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -106,16 +104,23 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_sign_out && LoginActivity.loggedIn) {
-            Toast.makeText(this, "Signing out", Toast.LENGTH_LONG).show();
             LoginActivity.loggedIn = false;
+            Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
+
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
 
+        if (id == R.id.action_messages && LoginActivity.loggedIn) {
+            intent = new Intent(this, MessageListActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
         if (id == R.id.action_settings) {
-            Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
             intent = new Intent(this, SettingsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -123,7 +128,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_about) {
-            Toast.makeText(this, "About", Toast.LENGTH_LONG).show();
             intent = new Intent(this, AboutActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -131,7 +135,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_news) {
-            Toast.makeText(this, "News", Toast.LENGTH_LONG).show();
             intent = new Intent(this, NewsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -139,7 +142,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_rates) {
-            Toast.makeText(this, "Rates", Toast.LENGTH_LONG).show();
             intent = new Intent(this, RatesActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -151,7 +153,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
 
     public void toggleBankingListview(final View view) {
 
-        //Toast.makeText(AcctSummaryActivity.this, "toggle banking " + expandBanking , Toast.LENGTH_LONG).show();
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_banking);
 
         if (expandBanking) {
@@ -168,7 +169,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
     public void toggleBorrowingListview(final View view) {
 
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_borrowing);
-        //Toast.makeText(AcctSummaryActivity.this, "toggle borrowing " + expandBorrowing , Toast.LENGTH_LONG).show();
 
         if (expandBorrowing) {
             borrowing_listview.setVisibility(View.GONE);
@@ -183,7 +183,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
 
     public void toggleInvestingListview(final View view) {
 
-        //Toast.makeText(AcctSummaryActivity.this, "toggle investing " + expandInvesting , Toast.LENGTH_LONG).show();
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_investing);
 
         if (expandInvesting) {
