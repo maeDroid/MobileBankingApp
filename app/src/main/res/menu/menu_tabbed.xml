@@ -1,8 +1,8 @@
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context="mae.comp3717.bcit.ca.bankingapp.TabbedActivity">
+
 
     <!-- Accounts Summary will display - if logged in -->
     <item android:id="@+id/action_acct_summary"
@@ -23,13 +23,6 @@
         android:icon="@drawable/ic_location_searching_white_48dp"
         android:title="@string/branch_locator"
         app:showAsAction="ifRoom"
-        />
-
-    <!-- Tabbed Activity -->
-    <item
-        android:id="@+id/action_tabs"
-        android:title="Pay Bills | Transfer | Deposit"
-        app:showAsAction="never"
         />
 
 
@@ -78,7 +71,4 @@
         android:orderInCategory="100"
         app:showAsAction="never"
         />
-
-
-
 </menu>

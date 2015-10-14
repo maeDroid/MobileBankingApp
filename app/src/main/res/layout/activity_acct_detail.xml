@@ -73,7 +73,7 @@
 
             <TextView
                 android:id="@+id/th_date"
-                android:text="@string/tx_date"
+                android:text="@string/date"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:layout_width="match_parent"
@@ -83,7 +83,7 @@
 
             <TextView
                 android:id="@+id/th_desc"
-                android:text="@string/tx_desc"
+                android:text="@string/desc"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
 
             <TextView
                 android:id="@+id/th_amount"
-                android:text="@string/tx_amount"
+                android:text="@string/amount"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:layout_width="match_parent"

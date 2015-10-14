@@ -13,7 +13,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DecimalFormat;
 import java.util.HashMap;
 
@@ -126,6 +125,20 @@ public class AcctSummaryActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.action_messages && LoginActivity.loggedIn) {
+            intent = new Intent(this, MessageListActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_tabs && LoginActivity.loggedIn){
+            intent = new Intent(this, TabbedActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
         if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -138,13 +151,6 @@ public class AcctSummaryActivity extends AppCompatActivity {
             Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
 
             intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
-        }
-
-        if (id == R.id.action_messages && LoginActivity.loggedIn) {
-            intent = new Intent(this, MessageListActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;

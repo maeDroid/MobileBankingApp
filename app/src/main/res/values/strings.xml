@@ -63,12 +63,10 @@
     <string-array name="banking_options">
         <item>Chequing</item>
         <item>Savings</item>
-        <item>USD Savings</item>
     </string-array>
 
     <string-array name="borrowing_options">
         <item>VISA</item>
-        <item>Mortgage</item>
     </string-array>
 
     <string-array name="investing_options">
@@ -83,8 +81,35 @@
     <string name="title_message_detail">Message Detail</string>
 
     <string name="tx">Recent Transactions</string>
-    <string name="tx_date">Date</string>
-    <string name="tx_desc">Description</string>
-    <string name="tx_amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="desc">Description</string>
+    <string name="amount">Amount</string>
+    <string name="transfer">Transfer</string>
+    <string name="deposit">Deposit</string>
+    <string name="pay_bill">Pay Bill</string>
+
+    <string-array name="accounts">
+        <item>Chequing</item>
+        <item>Savings</item>
+    </string-array>
+
+    <string-array name="payees">
+        <item>Sea to Sky VISA</item>
+        <item>B.C. Hydro</item>
+        <item>B.C.I.T.</item>
+        <item>Medical Services Plan of B.C.</item>
+        <item>Netflix</item>
+        <item>Rogers Mobility</item>
+        <item>Shaw Cable Systems</item>
+    </string-array>
+
+
+
+    <string name="title_activity_tabbed">TabbedActivity</string>
+
+    <string name="title_section1">Summary</string>
+    <string name="title_section2">Pay Bills</string>
+    <string name="title_section3">Transfer</string>
+
 
 </resources>
