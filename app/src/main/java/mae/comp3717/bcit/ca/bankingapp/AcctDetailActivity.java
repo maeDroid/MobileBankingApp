@@ -11,6 +11,11 @@ import android.widget.Toast;
 public class AcctDetailActivity extends AppCompatActivity {
 
     @Override
+    /**
+     *  Hardcoded to show the same mock data (for the Chequing Account)
+     *  regardless of what account is actually clicked on.  The title
+     *  in the action bar and the account balance are dynamically loaded.
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acct_detail);
@@ -101,6 +106,7 @@ public class AcctDetailActivity extends AppCompatActivity {
             return true;
         }
 
+        /*
         if (id == R.id.action_about) {
             intent = new Intent(this, AboutActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -121,6 +127,7 @@ public class AcctDetailActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     }

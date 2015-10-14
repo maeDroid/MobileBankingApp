@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        /*
         if (id == R.id.action_about) {
             intent = new Intent(this, AboutActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -113,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     }

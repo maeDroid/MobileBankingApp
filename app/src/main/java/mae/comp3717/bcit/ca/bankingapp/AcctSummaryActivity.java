@@ -45,7 +45,7 @@ public class AcctSummaryActivity extends AppCompatActivity {
         acctTotals.put("TFSA", 12576.88);
         acctTotals.put("RRSP", 25641.30);
 
-        //ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, categories);
+        // set listviews,adapters, and listeners
         ListAdapter bankingListAdapter = new CustomAdapter(this, bankingList);
         banking_listview = (ListView) findViewById(R.id.banking_listview);
         banking_listview.setAdapter(bankingListAdapter);
@@ -61,20 +61,12 @@ public class AcctSummaryActivity extends AppCompatActivity {
         investing_listview.setAdapter(investingListAdapter);
         investing_listview.setOnItemClickListener(new loadDetails());
         investing_listview.setVisibility(View.GONE);
-
-        /*
-        banking_listview.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int index, long id) {
-                        String cat_name = String.valueOf(parent.getItemAtPosition(index));
-                        Toast.makeText(AcctSummaryActivity.this, cat_name, Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
-        */
     }
 
+    /**
+     *  Listener for OnItemClick events on the listview items.
+     *  Hardcoded to load the same 'Acct Detail Activity' regardless of what item is clicked.
+     */
     public class loadDetails implements OnItemClickListener{
 
         @Override
@@ -165,6 +157,7 @@ public class AcctSummaryActivity extends AppCompatActivity {
             return true;
         }
 
+        /*
         if (id == R.id.action_about) {
             intent = new Intent(this, AboutActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -185,11 +178,15 @@ public class AcctSummaryActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void toggleBankingListview(final View view) {
+    /**
+     *  Handles toggling open and close the Banking ListView
+     */
+    public void toggleBankingList(final View view) {
 
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_banking);
 
@@ -204,7 +201,10 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
     }
 
-    public void toggleBorrowingListview(final View view) {
+    /**
+     *  Handles toggling open and close the Banking ListView
+     */
+    public void toggleBorrowingList(final View view) {
 
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_borrowing);
 
@@ -219,7 +219,10 @@ public class AcctSummaryActivity extends AppCompatActivity {
         }
     }
 
-    public void toggleInvestingListview(final View view) {
+    /**
+     *  Handles toggling open and close the Banking ListView
+     */
+    public void toggleInvestingList(final View view) {
 
         ImageButton arrow = (ImageButton) findViewById(R.id.ib_investing);
 

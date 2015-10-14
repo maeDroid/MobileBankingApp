@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:padding="10dp"
-                android:onClick="toggleBankingListview" />
+                android:onClick="toggleBankingList" />
 
 
             <ImageButton
@@ -42,7 +42,7 @@
                 android:layout_weight="1"
                 android:background="#990000"
                 android:src="@drawable/ic_keyboard_arrow_up_white_36dp"
-                android:onClick="toggleBankingListview"/>
+                android:onClick="toggleBankingList"/>
 
         </LinearLayout>
 
@@ -76,7 +76,7 @@
                 android:layout_weight="6"
                 android:layout_marginBottom="5dp"
                 android:padding="10dp"
-                android:onClick="toggleBorrowingListview" />
+                android:onClick="toggleBorrowingList" />
 
             <ImageButton
                 android:id="@+id/ib_borrowing"
@@ -86,7 +86,7 @@
                 android:layout_weight="1"
                 android:background="#990000"
                 android:src="@drawable/ic_keyboard_arrow_up_white_36dp"
-                android:onClick="toggleBorrowingListview"/>
+                android:onClick="toggleBorrowingList"/>
 
         </LinearLayout>
 
@@ -119,7 +119,7 @@
             android:layout_weight="6"
             android:layout_marginBottom="5dp"
             android:padding="10dp"
-            android:onClick="toggleInvestingListview"
+            android:onClick="toggleInvestingList"
             />
 
         <ImageButton
@@ -130,7 +130,7 @@
             android:layout_weight="1"
             android:background="#990000"
             android:src="@drawable/ic_keyboard_arrow_down_white_36dp"
-            android:onClick="toggleInvestingListview"/>
+            android:onClick="toggleInvestingList"/>
 
         </LinearLayout>
 
