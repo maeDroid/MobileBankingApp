@@ -120,13 +120,6 @@ public class TabbedActivity extends AppCompatActivity implements ActionBar.TabLi
             return true;
         }
 
-        if (id == R.id.action_tabs && LoginActivity.loggedIn){
-            intent = new Intent(this, TabbedActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
-        }
-
         if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

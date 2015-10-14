@@ -113,7 +113,7 @@ public class MessageListActivity extends AppCompatActivity
         }
 
         if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
-            intent = new Intent(this, AcctSummaryActivity.class);
+            intent = new Intent(this, TabbedActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;

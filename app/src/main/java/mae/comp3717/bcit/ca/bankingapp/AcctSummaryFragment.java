@@ -103,7 +103,7 @@ public class AcctSummaryFragment extends Fragment{
 
             TextView listText = (TextView) view.findViewById(R.id.bankingType);
             String acctType = listText.getText().toString();
-            String acctTotal = fmt.format(AcctSummaryActivity.acctTotals.get(cat_name));
+            String acctTotal = fmt.format(AcctSummaryFragment.acctTotals.get(cat_name));
             Intent intent = new Intent(getActivity().getBaseContext(), AcctDetailActivity.class);
             intent.putExtra("acctType", acctType);
             intent.putExtra("acctTotal", acctTotal);

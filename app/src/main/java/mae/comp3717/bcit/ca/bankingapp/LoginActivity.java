@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
-            intent = new Intent(this, AcctSummaryActivity.class);
+            intent = new Intent(this, TabbedActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
@@ -191,9 +191,10 @@ public class LoginActivity extends AppCompatActivity {
 
         // TODO:  validate email and password
 
-        intent = new Intent(this, AcctSummaryActivity.class);
-        startActivity(intent);
         LoginActivity.loggedIn = true;
+        intent = new Intent(this, TabbedActivity.class);
+        startActivity(intent);
+
     }
 
     // TODO:  add ability to reset password

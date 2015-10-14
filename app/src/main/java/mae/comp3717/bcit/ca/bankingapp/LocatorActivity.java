@@ -125,6 +125,20 @@ public class LocatorActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
+            intent = new Intent(this, TabbedActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_messages && LoginActivity.loggedIn) {
+            intent = new Intent(this, MessageListActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
         if (id == R.id.action_sign_in && !LoginActivity.loggedIn) {
             intent = new Intent(this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -137,20 +151,6 @@ public class LocatorActivity extends AppCompatActivity {
             Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
 
             intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
-        }
-
-        if (id == R.id.action_acct_summary && LoginActivity.loggedIn) {
-            intent = new Intent(this, AcctSummaryActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
-        }
-
-        if (id == R.id.action_messages && LoginActivity.loggedIn) {
-            intent = new Intent(this, MessageListActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;

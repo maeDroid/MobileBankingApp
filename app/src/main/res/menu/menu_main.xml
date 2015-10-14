@@ -25,12 +25,6 @@
         app:showAsAction="ifRoom"
         />
 
-    <!-- Tabbed Activity -->
-    <item
-        android:id="@+id/action_tabs"
-        android:title="Pay Bills | Transfer | Deposit"
-        app:showAsAction="never"
-        />
 
 
     <!-- SAVE FOR FUTURE IMPLEMENTATION

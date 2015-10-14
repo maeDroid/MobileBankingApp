@@ -27,7 +27,7 @@ public class CustomAdapter extends ArrayAdapter<String> {
         DecimalFormat fmt = new DecimalFormat("$ #,###.00");
         acctName.setText(category);
         currency.setText("");
-        amount.setText(fmt.format(AcctSummaryActivity.acctTotals.get(category)));
+        amount.setText(fmt.format(AcctSummaryFragment.acctTotals.get(category)));
 
         return customView;
     }
