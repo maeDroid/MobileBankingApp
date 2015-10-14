@@ -60,6 +60,7 @@ public class AcctSummaryActivity extends AppCompatActivity {
         investing_listview.setAdapter(investingListAdapter);
         investing_listview.setOnItemClickListener(new loadDetails());
         investing_listview.setVisibility(View.GONE);
+
     }
 
     /**

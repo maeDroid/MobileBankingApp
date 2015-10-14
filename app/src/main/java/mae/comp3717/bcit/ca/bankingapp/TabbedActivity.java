@@ -186,7 +186,7 @@ public class TabbedActivity extends AppCompatActivity implements ActionBar.TabLi
 
             switch(position) {
                 case 0:
-                    return PlaceholderFragment.newInstance(position+1);
+                    return AcctSummaryFragment.newInstance();
                 case 1:
                     return BillPaymentFragment.newInstance();
                 case 2:
