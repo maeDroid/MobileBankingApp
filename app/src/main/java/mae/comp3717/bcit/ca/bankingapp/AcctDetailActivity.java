@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AcctDetailActivity extends AppCompatActivity {
@@ -13,6 +14,14 @@ public class AcctDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acct_detail);
+
+        TextView tv_balance = (TextView) findViewById(R.id.tv_acct_balance);
+        Intent intent       = getIntent();
+        String acctname     = intent.getStringExtra("acctType");
+        String balance      = intent.getStringExtra("acctTotal");
+
+        setTitle(acctname + " Account Details");
+        tv_balance.setText(balance);
     }
 
     @Override
@@ -78,6 +87,12 @@ public class AcctDetailActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.action_messages && LoginActivity.loggedIn) {
+            intent = new Intent(this, MessageListActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
 
         if (id == R.id.action_settings) {
             intent = new Intent(this, SettingsActivity.class);

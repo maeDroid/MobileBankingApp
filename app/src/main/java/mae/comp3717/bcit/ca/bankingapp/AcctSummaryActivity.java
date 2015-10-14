@@ -7,44 +7,62 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DecimalFormat;
+import java.util.HashMap;
 
 public class AcctSummaryActivity extends AppCompatActivity {
 
     private boolean expandBanking = true;
-    private boolean expandBorrowing = false;
+    private boolean expandBorrowing = true;
     private boolean expandInvesting = false;
     private ListView banking_listview;
     private ListView borrowing_listview;
     private ListView investing_listview;
+    public static HashMap<String, Double> acctTotals = new HashMap<String, Double>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acct_summary);
 
-        String[] bankingList = {"Savings", "Chequing", "USD Savings"};
-        String[] borrowingList = {"VISA", "Mortgage"};
-        String[] investingList = {"Bonds", "GIC", "TFSA", "RRSP", "Mutual Funds", "Stocks"};
+        // hard coded data to display
+        String[] bankingList    = {"Savings", "Chequing"};
+        String[] borrowingList  = {"VISA"};
+        String[] investingList  = {"Bonds", "GIC", "TFSA", "RRSP"};
+        acctTotals.put("Savings", 1021.23);
+        acctTotals.put("Chequing", 237.98);
+        acctTotals.put("VISA", 65.73);
+        acctTotals.put("Bonds", 5000.00);
+        acctTotals.put("GIC", 1500.00);
+        acctTotals.put("TFSA", 12576.88);
+        acctTotals.put("RRSP", 25641.30);
 
         //ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, categories);
         ListAdapter bankingListAdapter = new CustomAdapter(this, bankingList);
         banking_listview = (ListView) findViewById(R.id.banking_listview);
         banking_listview.setAdapter(bankingListAdapter);
+        banking_listview.setOnItemClickListener(new loadDetails());
 
         ListAdapter borrowingListAdapter = new CustomAdapter(this, borrowingList);
         borrowing_listview = (ListView) findViewById(R.id.borrowing_listview);
         borrowing_listview.setAdapter(borrowingListAdapter);
-        borrowing_listview.setVisibility(View.GONE);
+        borrowing_listview.setOnItemClickListener(new loadDetails());
 
         ListAdapter investingListAdapter = new CustomAdapter(this, investingList);
         investing_listview = (ListView) findViewById(R.id.investing_listview);
         investing_listview.setAdapter(investingListAdapter);
+        investing_listview.setOnItemClickListener(new loadDetails());
         investing_listview.setVisibility(View.GONE);
 
+        /*
         banking_listview.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
@@ -54,6 +72,26 @@ public class AcctSummaryActivity extends AppCompatActivity {
                     }
                 }
         );
+        */
+    }
+
+    public class loadDetails implements OnItemClickListener{
+
+        @Override
+        public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+
+            DecimalFormat fmt = new DecimalFormat("$ #,###.00");
+            String cat_name = String.valueOf(adapter.getItemAtPosition(position));
+            Toast.makeText(AcctSummaryActivity.this, "Mock data for Chequing Account", Toast.LENGTH_SHORT).show();
+
+            TextView listText = (TextView) view.findViewById(R.id.bankingType);
+            String acctType = listText.getText().toString();
+            String acctTotal = fmt.format(AcctSummaryActivity.acctTotals.get(cat_name));
+            Intent intent = new Intent(AcctSummaryActivity.this, AcctDetailActivity.class);
+            intent.putExtra("acctType", acctType);
+            intent.putExtra("acctTotal", acctTotal);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -195,6 +233,5 @@ public class AcctSummaryActivity extends AppCompatActivity {
             arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_white_36dp);
         }
     }
-
 
 }

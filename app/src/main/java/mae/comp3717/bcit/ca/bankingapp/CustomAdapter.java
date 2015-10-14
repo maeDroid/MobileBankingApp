@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class CustomAdapter extends ArrayAdapter<String> {
 
     public CustomAdapter(Context context, String[] resource) {
@@ -16,16 +18,17 @@ public class CustomAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        View customView = inflater.inflate(R.layout.custom_row, parent, false);
+        View customView         = inflater.inflate(R.layout.custom_row, parent, false);
+        TextView acctName       = (TextView) customView.findViewById(R.id.bankingType);
+        TextView currency       = (TextView) customView.findViewById(R.id.bankingCurrency);
+        TextView amount         = (TextView) customView.findViewById(R.id.bankingAmt);
+        String category         = getItem(position);
 
-        String category     = getItem(position);
-        TextView acctName   = (TextView) customView.findViewById(R.id.bankingType);
-        TextView currency   = (TextView) customView.findViewById(R.id.bankingCurrency);
-        TextView amount     = (TextView) customView.findViewById(R.id.bankingAmt);
-
+        // set values
+        DecimalFormat fmt = new DecimalFormat("$ #,###.00");
         acctName.setText(category);
         currency.setText("");
-        amount.setText("$ 9.99");
+        amount.setText(fmt.format(AcctSummaryActivity.acctTotals.get(category)));
 
         return customView;
     }

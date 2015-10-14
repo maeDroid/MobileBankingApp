@@ -50,7 +50,9 @@
         <ListView
             android:id="@+id/banking_listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            >
         </ListView>
 
         <LinearLayout
@@ -83,7 +85,7 @@
                 android:layout_gravity="right"
                 android:layout_weight="1"
                 android:background="#990000"
-                android:src="@drawable/ic_keyboard_arrow_down_white_36dp"
+                android:src="@drawable/ic_keyboard_arrow_up_white_36dp"
                 android:onClick="toggleBorrowingListview"/>
 
         </LinearLayout>
@@ -91,7 +93,9 @@
         <ListView
             android:id="@+id/borrowing_listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            >
         </ListView>
 
     <LinearLayout
@@ -133,7 +137,9 @@
         <ListView
             android:id="@+id/investing_listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            >
         </ListView>
 
     </LinearLayout>

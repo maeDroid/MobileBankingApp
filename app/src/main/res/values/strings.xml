@@ -39,7 +39,7 @@
     <string name="security_question">Security Question</string>
     <string name="security_answer">Answer</string>
     <string name="email">E-Mail</string>
-    <string name="phone">Phone Number</string>
+    <string name="phone">Phone #</string>
     <string name="thankyou">Thank you for registering.  Please sign in.</string>
 
     <string-array name="questions">
@@ -81,5 +81,10 @@
     </string-array>
     <string name="title_message_list">Messages</string>
     <string name="title_message_detail">Message Detail</string>
+
+    <string name="tx">Recent Transactions</string>
+    <string name="tx_date">Date</string>
+    <string name="tx_desc">Description</string>
+    <string name="tx_amount">Amount</string>
 
 </resources>
