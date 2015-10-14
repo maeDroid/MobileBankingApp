@@ -44,6 +44,7 @@
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:paddingBottom="10dp"
                     >
 
                     <TextView
@@ -56,7 +57,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
-                        />
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
 
                     <AutoCompleteTextView
                         android:id="@+id/card_number"
@@ -75,7 +77,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="5dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:id="@+id/tv_pwd"
@@ -97,7 +100,6 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true" />
-
 
                 </TableRow>
             </TableLayout>
@@ -139,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-
+                android:layout_marginBottom="16dp"
                 android:onClick="showRegistration" />
 
             <TableLayout
@@ -163,7 +165,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
-                        />
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
 
                     <EditText
                         android:id="@+id/et_firstname"
@@ -192,7 +195,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
-                        />
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
 
                     <EditText
                         android:id="@+id/et_lastname"
@@ -278,6 +282,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         />
 
                     <Spinner
@@ -302,8 +308,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginBottom="5dp">
-
-
 
                     <TextView
                         android:id="@+id/tv_securityA"
@@ -350,6 +354,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:onClick="hideRegistration" />
 

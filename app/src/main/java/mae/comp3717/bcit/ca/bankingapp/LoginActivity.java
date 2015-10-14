@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button create;
     private Button register;
     private Button cancel;
+    private Switch remember;
     private Intent intent;
 
     public static boolean loggedIn = false;
@@ -31,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         create      = (Button) findViewById(R.id.create_registration);
         register    = (Button) findViewById(R.id.registration_button);
         cancel      = (Button) findViewById(R.id.cancel_registration);
+        remember    = (Switch) findViewById(R.id.remember_me);
         //final Spinner spinner   = (Spinner) findViewById(R.id.spinner);
         //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.questions, android.R.layout.simple_spinner_item);
         //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -152,6 +155,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void showRegistration(final View view) {
 
+        remember.setVisibility(View.GONE);
         signin.setVisibility(View.GONE);
         create.setVisibility(View.GONE);
         register.setVisibility(View.VISIBLE);
@@ -161,6 +165,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void hideRegistration(final View view) {
 
+        remember.setVisibility(View.VISIBLE);
         signin.setVisibility(View.VISIBLE);
         create.setVisibility(View.VISIBLE);
         register.setVisibility(View.GONE);
