@@ -32,13 +32,17 @@ import java.util.List;
  */
 public class SettingsActivity extends PreferenceActivity {
 
-
     /**
      * {@inheritDoc}
      */
     @Override
     public boolean onIsMultiPane() {
         return isXLargeTablet(this);
+    }
+
+    @Override
+    protected boolean isValidFragment(String fragmentName) {
+        return true;
     }
 
     /**
