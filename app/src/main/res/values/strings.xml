@@ -28,7 +28,7 @@
     <string name="error_incorrect_password">Incorrect password</string>
     <string name="error_field_required">Required Field</string>
 
-    <string name="hint_card_number">1234 5678 9000 0000</string>
+    <string name="hint_card_number">453...</string>
     <string name="hint_password"></string>
 
     <string name="new_reg">Click here to Register a New Account</string>
@@ -93,6 +93,11 @@
         <item>Savings</item>
     </string-array>
 
+    <string-array name="accounts_rev">
+        <item>Savings</item>
+        <item>Chequing</item>
+    </string-array>
+
     <string-array name="payees">
         <item>Sea to Sky VISA</item>
         <item>B.C. Hydro</item>
@@ -110,6 +115,9 @@
     <string name="title_section1">Summary</string>
     <string name="title_section2">Pay Bills</string>
     <string name="title_section3">Transfer</string>
+
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="alert_dialog_two_buttons_title">SOME STRING?</string>
 
 
 </resources>

@@ -210,6 +210,4 @@ public class TabbedActivity extends AppCompatActivity implements ActionBar.TabLi
         }
     }
 
-
-
 }

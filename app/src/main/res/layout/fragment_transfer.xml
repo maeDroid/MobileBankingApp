@@ -61,7 +61,7 @@
                 />
             <Spinner
                 android:id="@+id/to_spinner"
-                android:entries="@array/accounts"
+                android:entries="@array/accounts_rev"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.70"
